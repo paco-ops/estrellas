@@ -38,7 +38,6 @@ body {
   text-decoration: none;
   margin-left: 20px;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -56,25 +55,19 @@ body {
   background: url('estrellas.jpg') center/cover no-repeat;
 }
 
-/* OVERLAY HERO */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.5)
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
 }
 
-/* TITULO HERO */
 .hero h1 {
   position: relative;
   z-index: 2;
   font-family: 'Playfair Display', serif;
-  font-weight: 400;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 /* SECCIONES */
@@ -83,14 +76,14 @@ body {
   max-width: 700px;
 }
 
-/* TEXTO GRANDE */
+/* TEXTO */
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
 }
 
-/* IMAGEN */
+/* IMAGEN FULL */
 .full img {
   width: 100%;
   display: block;
@@ -106,27 +99,13 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: black;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero {
-    height: 60vh;
-    padding-bottom: 40px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .big {
-    font-size: 1.6rem;
-  }
+  .hero { height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .big { font-size: 1.6rem; }
 }
 </style>
 </head>
@@ -156,31 +135,53 @@ body {
   </div>
 </section>
 
-<!-- BLOQUE 2 -->
+<!-- IMAGEN 1 -->
 <section class="full">
-  <img src="estrellas.jpg">
+  <img src="club1.jpg">
+</section>
+
+<!-- BLOQUE 2 -->
+<section class="section">
+  <div class="big">
+    Aquí no vienes a desconectar.<br>
+    Vienes a reconectar.
+  </div>
+</section>
+
+<!-- IMAGEN 2 -->
+<section class="full">
+  <img src="club2.jpg">
 </section>
 
 <!-- BLOQUE 3 -->
 <section class="section">
   <div class="big">
-    Cada miembro tiene su momento.<br>
-    Su semana.<br>
-    Su lugar.
+    Arquitectura abierta.<br>
+    Naturaleza dentro.<br>
+    Silencio real.
   </div>
+</section>
+
+<!-- IMAGEN 3 -->
+<section class="full">
+  <img src="club3.jpg">
 </section>
 
 <!-- BLOQUE 4 -->
 <section class="section">
   <div class="big">
-    No reservas.<br>
-    No compites.<br>
-    No repites experiencias.<br><br>
-    Vuelves.
+    Pocas casas.<br>
+    Mucho espacio.<br>
+    Todo pensado.
   </div>
 </section>
 
-<!-- CTA -->
+<!-- IMAGEN 4 -->
+<section class="full">
+  <img src="club4.jpg">
+</section>
+
+<!-- CIERRE -->
 <section class="section">
   <div class="big">
     El acceso es limitado.

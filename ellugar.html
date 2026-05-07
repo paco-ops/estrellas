@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #fff;
   color: #111;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* NAV */
@@ -45,12 +47,34 @@ body {
 
 /* HERO */
 .hero {
+  position: relative;
   height: 80vh;
   display: flex;
   align-items: flex-end;
   padding: 0 8% 80px;
-  background: url('estrellas.jpg') center/cover no-repeat;
   color: white;
+  background: url('estrellas.jpg') center/cover no-repeat;
+}
+
+/* OVERLAY HERO */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)
+  );
+}
+
+/* TITULO HERO */
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 
 /* SECCIONES */
@@ -59,6 +83,7 @@ body {
   max-width: 700px;
 }
 
+/* TEXTO GRANDE */
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -76,6 +101,7 @@ body {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
+  margin: 40px 0;
 }
 
 .video iframe {
@@ -94,10 +120,13 @@ body {
     padding-bottom: 40px;
   }
 
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
   .big {
     font-size: 1.6rem;
   }
-
 }
 </style>
 </head>

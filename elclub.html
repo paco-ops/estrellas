@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Club — ESTRELLAS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8% 80px;
+  color: white;
+  background: url('estrellas.jpg') center/cover no-repeat;
+}
+
+/* TEXTO */
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
+}
+
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+/* IMAGEN */
+.full img {
+  width: 100%;
+  display: block;
+}
+
+/* BOTÓN */
+.button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding-bottom: 40px;
+  }
+
+  .big {
+    font-size: 1.6rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div><a href="index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="ellugar.html">EL LUGAR</a>
+    <a href="elclub.html">EL CLUB</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Esto no es para todo el mundo.</h1>
+</section>
+
+<!-- BLOQUE 1 -->
+<section class="section">
+  <div class="big">
+    No vienes cuando quieres.<br>
+    Vienes cuando puedes.<br>
+    Y cuando entiendes por qué.
+  </div>
+</section>
+
+<!-- BLOQUE 2 -->
+<section class="full">
+  <img src="estrellas.jpg">
+</section>
+
+<!-- BLOQUE 3 -->
+<section class="section">
+  <div class="big">
+    Cada miembro tiene su momento.<br>
+    Su semana.<br>
+    Su lugar.
+  </div>
+</section>
+
+<!-- BLOQUE 4 -->
+<section class="section">
+  <div class="big">
+    No reservas.<br>
+    No compites.<br>
+    No repites experiencias.<br><br>
+    Vuelves.
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="big">
+    El acceso es limitado.
+  </div>
+
+  <a href="mailto:hola@clubestrellas.es?subject=Solicitud%20de%20invitaci%C3%B3n&body=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20Club%20ESTRELLAS." class="button">
+    SOLICITAR INVITACIÓN
+  </a>
+</section>
+
+</body>
+</html>

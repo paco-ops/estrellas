@@ -15,6 +15,33 @@ body {
   color: #111;
 }
 
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
 /* HERO */
 .hero {
   position: relative;
@@ -100,10 +127,9 @@ h1 {
 /* SECCIONES */
 .section {
   padding: 80px 8%;
-  max-width: 700px; /* 🔥 ajuste premium */
+  max-width: 700px;
 }
 
-/* TEXTO GRANDE */
 .big-text {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -115,7 +141,7 @@ h1 {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  margin: 40px 0; /* 🔥 aire visual */
+  margin: 40px 0;
 }
 
 .video-block iframe {
@@ -128,14 +154,37 @@ h1 {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  .big-text { font-size: 1.6rem; }
-  .hero { padding: 0 8% 10%; }
+
+  .nav {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .big-text {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding: 0 8% 10%;
+  }
+
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div>ESTRELLAS</div>
+  <div>
+    <a href="ellugar.html">EL LUGAR</a>
+    <a href="#">EL CLUB</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">

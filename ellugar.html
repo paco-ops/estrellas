@@ -15,6 +15,33 @@ body {
   color: #111;
 }
 
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
 /* HERO */
 .hero {
   height: 80vh;
@@ -25,13 +52,7 @@ body {
   color: white;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-/* BLOQUES */
+/* SECCIONES */
 .section {
   padding: 80px 8%;
   max-width: 700px;
@@ -52,6 +73,7 @@ body {
 /* VIDEO */
 .video {
   position: relative;
+  width: 100%;
   padding-top: 56.25%;
 }
 
@@ -60,27 +82,35 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
   .hero {
     height: 60vh;
     padding-bottom: 40px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
   .big {
     font-size: 1.6rem;
   }
+
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div><a href="index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="ellugar.html">EL LUGAR</a>
+    <a href="elclub.html">EL CLUB</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -113,7 +143,7 @@ body {
 <section>
   <div class="video">
     <iframe 
-      src="https://www.youtube.com/embed/ouDq46PC_i8?autoplay=1&mute=1&loop=1&playlist=ouDq46PC_i8&controls=0"
+      src="https://www.youtube.com/embed/ouDq46PC_i8?autoplay=1&mute=1&loop=1&playlist=ouDq46PC_i8&controls=0&modestbranding=1"
       allow="autoplay"
       allowfullscreen>
     </iframe>

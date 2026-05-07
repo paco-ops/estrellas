@@ -72,6 +72,7 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* BLOQUES DE TEXTO */
 .section {
   padding: 80px 8%;
   max-width: 900px;
@@ -83,11 +84,12 @@ h1 {
   line-height: 1.4;
 }
 
-/* móvil */
+/* MÓVIL */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
+
   .big-text {
     font-size: 1.6rem;
   }
@@ -97,11 +99,18 @@ h1 {
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+  <!-- IMAGEN -->
+  <img src="estrellas.jpg">
+
+  <!-- OSCURECER -->
   <div class="overlay"></div>
 
+  <!-- TEXTO -->
   <div class="content">
+
     <h1>
       Hay lugares a los que vas.<br><br>
       Y lugares a los que vuelves.
@@ -114,9 +123,11 @@ h1 {
     <a href="#" class="button">
       SOLICITAR INVITACIÓN
     </a>
+
   </div>
 </section>
 
+<!-- BLOQUE 2 -->
 <section class="section">
   <div class="big-text">
     No es un hotel.<br>
@@ -125,6 +136,7 @@ h1 {
   </div>
 </section>
 
+<!-- BLOQUE 3 -->
 <section class="section">
   <div class="big-text">
     Es un lugar donde el mundo se queda fuera.<br>

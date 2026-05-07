@@ -36,7 +36,7 @@ body {
   z-index: 0;
 }
 
-/* OVERLAY CORRECTO */
+/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
@@ -47,20 +47,6 @@ body {
     rgba(0,0,0,0) 70%
   );
   z-index: 1;
-}
-
-/* FADE INFERIOR LIMPIO */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 60px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 60%,
-    rgba(255,255,255,0.85) 100%
-  );
-  z-index: 2;
 }
 
 /* CONTENIDO */
@@ -102,9 +88,9 @@ h1 {
   background: white;
 }
 
-/* BLOQUES */
+/* SECCIONES */
 .section {
-  padding: 60px 8%;
+  padding: 80px 8%;
   max-width: 900px;
 }
 
@@ -112,6 +98,12 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
+}
+
+/* BLOQUE VISUAL */
+.full-image img {
+  width: 100%;
+  display: block;
 }
 
 /* RESPONSIVE */
@@ -153,9 +145,9 @@ h1 {
       Donde el mundo se queda fuera.
     </div>
 
-<a href="mailto:hola@clubestrellas.es?subject=Solicitud%20de%20invitaci%C3%B3n&body=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20ESTRELLAS.%20Gracias." class="button">
-  SOLICITAR INVITACIÓN
-</a>
+    <a href="mailto:hola@clubestrellas.es?subject=Solicitud%20de%20invitaci%C3%B3n&body=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20ESTRELLAS." class="button">
+      SOLICITAR INVITACIÓN
+    </a>
 
   </div>
 
@@ -177,6 +169,11 @@ h1 {
     Donde el tiempo se estira.<br>
     Donde el silencio vuelve a tener sentido.
   </div>
+</section>
+
+<!-- BLOQUE 4 (IMPACTO VISUAL) -->
+<section class="full-image">
+  <img src="estrellas.jpg">
 </section>
 
 </body>

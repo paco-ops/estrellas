@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #fff;
   color: #111;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* NAV */
@@ -36,6 +38,7 @@ body {
   text-decoration: none;
   margin-left: 20px;
   opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -53,12 +56,34 @@ body {
   background: url('estrellas.jpg') center/cover no-repeat;
 }
 
-/* TEXTO */
+/* OVERLAY HERO */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)
+  );
+}
+
+/* TITULO HERO */
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+/* SECCIONES */
 .section {
   padding: 80px 8%;
   max-width: 700px;
 }
 
+/* TEXTO GRANDE */
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -76,11 +101,16 @@ body {
   display: inline-block;
   margin-top: 40px;
   padding: 12px 28px;
-  background: black;
+  background: #111;
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: black;
 }
 
 /* RESPONSIVE */
@@ -88,6 +118,10 @@ body {
   .hero {
     height: 60vh;
     padding-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
   }
 
   .big {

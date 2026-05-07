@@ -38,7 +38,6 @@ body {
   text-decoration: none;
   margin-left: 20px;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -56,25 +55,19 @@ body {
   background: url('estrellas.jpg') center/cover no-repeat;
 }
 
-/* OVERLAY HERO */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.5)
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
 }
 
-/* TITULO HERO */
 .hero h1 {
   position: relative;
   z-index: 2;
   font-family: 'Playfair Display', serif;
-  font-weight: 400;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 /* SECCIONES */
@@ -90,10 +83,16 @@ body {
   line-height: 1.4;
 }
 
-/* IMAGEN FULL */
+/* IMAGENES CINEMATOGRÁFICAS */
+.full {
+  height: 70vh;
+  overflow: hidden;
+}
+
 .full img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* VIDEO */
@@ -114,19 +113,9 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .hero {
-    height: 60vh;
-    padding-bottom: 40px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .big {
-    font-size: 1.6rem;
-  }
+  .hero { height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .big { font-size: 1.6rem; }
 }
 </style>
 </head>
@@ -171,10 +160,9 @@ body {
 
 <!-- VIDEO -->
 <section>
-  <div class="video-block">
+  <div class="video">
     <iframe 
       src="https://player.vimeo.com/video/1190237957?autoplay=1&muted=1&loop=1&background=1"
-      frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen>
     </iframe>

@@ -27,7 +27,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
   font-size: 13px;
   letter-spacing: 1px;
 }
@@ -35,14 +34,13 @@ body {
 .nav a {
   color: #111;
   text-decoration: none;
-  margin-left: 20px;
   opacity: 0.85;
 }
 
 /* CONTENIDO */
 .wrapper {
   max-width: 700px;
-  margin: 120px auto;
+  margin: 140px auto;
   padding: 0 20px;
 }
 
@@ -53,8 +51,9 @@ body {
   margin-bottom: 60px;
 }
 
+/* PREGUNTAS */
 .question {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .question p {
@@ -71,6 +70,7 @@ textarea {
   font-size: 1rem;
   resize: none;
   outline: none;
+  background: transparent;
 }
 
 /* BOTÓN */
@@ -83,6 +83,7 @@ textarea {
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  border: none;
   cursor: pointer;
 }
 
@@ -91,6 +92,7 @@ textarea {
 
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div><a href="index.html">ESTRELLAS</a></div>
 </nav>
@@ -102,38 +104,33 @@ textarea {
     queremos entender algo.
   </div>
 
-  <div class="question">
-    <p>¿Qué te ha hecho escribirnos?</p>
-    <textarea id="q1" rows="2"></textarea>
-  </div>
+  <form action="https://formspree.io/f/TU_CODIGO_FORMSPREE" method="POST">
 
-  <div class="question">
-    <p>¿Qué tipo de lugares buscas… y por qué?</p>
-    <textarea id="q2" rows="2"></textarea>
-  </div>
+    <!-- REDIRECT -->
+    <input type="hidden" name="_redirect" value="https://clubestrellas.es/gracias.html">
 
-  <div class="question">
-    <p>¿Qué harías durante una semana aquí?</p>
-    <textarea id="q3" rows="2"></textarea>
-  </div>
+    <div class="question">
+      <p>¿Qué te ha hecho escribirnos?</p>
+      <textarea name="q1" rows="2" required></textarea>
+    </div>
 
-  <div class="button" onclick="sendEmail()">
-    CONTINUAR
-  </div>
+    <div class="question">
+      <p>¿Qué tipo de lugares buscas… y por qué?</p>
+      <textarea name="q2" rows="2" required></textarea>
+    </div>
+
+    <div class="question">
+      <p>¿Qué harías durante una semana aquí?</p>
+      <textarea name="q3" rows="2" required></textarea>
+    </div>
+
+    <button type="submit" class="button">
+      CONTINUAR
+    </button>
+
+  </form>
 
 </div>
-
-<script>
-function sendEmail() {
-  const q1 = encodeURIComponent(document.getElementById("q1").value);
-  const q2 = encodeURIComponent(document.getElementById("q2").value);
-  const q3 = encodeURIComponent(document.getElementById("q3").value);
-
-  const body = `Respuestas:\n\n1. ${q1}\n\n2. ${q2}\n\n3. ${q3}`;
-
-  window.location.href = `mailto:hola@clubestrellas.es?subject=Ritual%20de%20acceso&body=${body}`;
-}
-</script>
 
 </body>
 </html>

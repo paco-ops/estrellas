@@ -44,11 +44,23 @@ body {
   padding: 0 20px;
 }
 
+/* INTRO */
 .intro {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+}
+
+/* BLOQUE CONTEXTO */
+.section {
+  margin-bottom: 80px;
+}
+
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  line-height: 1.5;
 }
 
 /* PREGUNTAS */
@@ -80,20 +92,31 @@ textarea {
   padding: 12px 28px;
   background: #111;
   color: white;
-  text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
 }
 
-/* MENSAJE FINAL */
+/* THANK YOU */
 .thankyou {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
   text-align: center;
   margin-top: 200px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 100px auto;
+  }
+
+  .intro,
+  .big {
+    font-size: 1.6rem;
+  }
 }
 </style>
 </head>
@@ -109,7 +132,22 @@ textarea {
 
   <div class="intro">
     Antes de seguir,<br>
-    queremos entender algo.
+    merece la pena aclarar algo.
+  </div>
+
+  <div class="section">
+    <div class="big">
+      ESTRELLAS no es un lugar al que se accede de forma abierta.<br><br>
+
+      No buscamos a todo el mundo.<br>
+      Ni todo el mundo busca esto.<br><br>
+
+      Este proceso no es un trámite.<br>
+      Es una manera de ver si tiene sentido continuar.<br><br>
+
+      Si no te ves aquí,<br>
+      es mejor dejarlo ahora.
+    </div>
   </div>
 
   <form id="ritual-form" action="https://formspree.io/f/xpqbyzqq" method="POST">

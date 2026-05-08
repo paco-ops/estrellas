@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso — ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8% 80px;
+  color: white;
+  background: url('estrellas.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
+}
+
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* BOTÓN */
+.button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .big {
+    font-size: 1.6rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div><a href="index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="ellugar.html">EL LUGAR</a>
+    <a href="elclub.html">EL CLUB</a>
+    <a href="acceso.html">ACCESO</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>El acceso no es abierto.</h1>
+</section>
+
+<!-- BLOQUE 1 -->
+<section class="section">
+  <div class="big">
+    ESTRELLAS no funciona como un alojamiento.
+  </div>
+</section>
+
+<!-- BLOQUE 2 -->
+<section class="section">
+  <div class="big">
+    El club está limitado a un número reducido de miembros.<br><br>
+    Cada uno tiene su tiempo,<br>
+    su espacio,<br>
+    y su forma de estar aquí.
+  </div>
+</section>
+
+<!-- BLOQUE 3 -->
+<section class="section">
+  <div class="big">
+    El acceso no se reserva.<br>
+    Se recibe.
+  </div>
+</section>
+
+<!-- BLOQUE 4 -->
+<section class="section">
+  <div class="big">
+    Cada miembro puede invitar.<br><br>
+    Pero no todo el mundo entra.
+  </div>
+</section>
+
+<!-- BLOQUE 5 -->
+<section class="section">
+  <div class="big">
+    No hay programación.<br><br>
+    Pero pasan cosas.<br>
+    Y normalmente,<br>
+    son las que recuerdas.
+  </div>
+</section>
+
+<!-- BLOQUE 6 -->
+<section class="section">
+  <div class="big">
+    Si necesitas saber todos los detalles,<br>
+    probablemente no es el momento.
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="big">
+    Si lo entiendes,<br>
+    podemos hablar.
+  </div>
+
+  <a href="mailto:hola@clubestrellas.es?subject=Solicitud%20de%20acceso&body=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20el%20acceso%20a%20ESTRELLAS." class="button">
+    SOLICITAR INFORMACIÓN
+  </a>
+</section>
+
+</body>
+</html>

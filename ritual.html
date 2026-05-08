@@ -73,14 +73,13 @@ body {
   margin-bottom: 10px;
 }
 
-textarea {
+textarea, input {
   width: 100%;
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  resize: none;
   outline: none;
   background: transparent;
 }
@@ -130,7 +129,6 @@ textarea {
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div><a href="index.html">ESTRELLAS</a></div>
 </nav>
@@ -163,7 +161,6 @@ textarea {
 
   <form id="ritual-form" action="https://formspree.io/f/xpqbyzqq" method="POST">
 
-    <!-- ANTISPAM -->
     <input type="text" name="_gotcha" style="display:none">
 
     <div class="question">
@@ -204,6 +201,27 @@ textarea {
     <div class="question">
       <p>¿Cómo imaginas tu vida dentro de 10 años?</p>
       <textarea name="futuro" rows="2"></textarea>
+    </div>
+
+    <!-- NUEVO BLOQUE CONTACTO -->
+    <div class="question">
+      <p>Nombre y apellidos</p>
+      <input type="text" name="nombre" required>
+    </div>
+
+    <div class="question">
+      <p>Email</p>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="question">
+      <p>Teléfono</p>
+      <input type="tel" name="telefono">
+    </div>
+
+    <div class="question">
+      <p>Ciudad de residencia</p>
+      <input type="text" name="ciudad">
     </div>
 
     <button type="submit" class="button">

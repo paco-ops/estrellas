@@ -86,6 +86,15 @@ textarea {
   border: none;
   cursor: pointer;
 }
+
+/* MENSAJE FINAL */
+.thankyou {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 100px;
+}
 </style>
 </head>
 
@@ -103,10 +112,7 @@ textarea {
     queremos entender algo.
   </div>
 
-  <form action="https://formspree.io/f/xpqbyzqq" method="POST">
-
-    <!-- REDIRECCIÓN CORRECTA -->
-    <input type="hidden" name="_next" value="https://clubestrellas.es/gracias.html">
+  <form id="ritual-form" action="https://formspree.io/f/xpqbyzqq" method="POST">
 
     <!-- ANTISPAM -->
     <input type="text" name="_gotcha" style="display:none">
@@ -133,6 +139,31 @@ textarea {
   </form>
 
 </div>
+
+<script>
+const form = document.getElementById('ritual-form');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  form.innerHTML = `
+    <div class="thankyou">
+      Gracias.<br><br>
+      Te diremos algo.
+    </div>
+  `;
+});
+</script>
 
 </body>
 </html>

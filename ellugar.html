@@ -83,7 +83,7 @@ body {
   line-height: 1.4;
 }
 
-/* IMAGENES */
+/* IMÁGENES */
 .full {
   height: 70vh;
   overflow: hidden;
@@ -111,18 +111,20 @@ body {
   border: 0;
 }
 
-/* 🔥 CIERRE CON IMAGEN */
-.section.final-hero {
+/* 🔥 HERO FINAL (ARREGLADO) */
+.final-hero {
   position: relative;
   color: white;
   height: 70vh;
   display: flex;
   align-items: center;
   padding: 0 8%;
+  width: 100%;
+  max-width: none;
   background: url('club77.jpg') center/cover no-repeat;
 }
 
-.section.final-hero::before {
+.final-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -133,7 +135,7 @@ body {
   );
 }
 
-.section.final-hero .big {
+.final-hero .big {
   position: relative;
   z-index: 2;
 }
@@ -196,8 +198,8 @@ body {
   </div>
 </section>
 
-<!-- 🔥 CIERRE CON TU FOTO -->
-<section class="section final-hero">
+<!-- 🔥 CIERRE CORRECTO -->
+<section class="final-hero">
   <div class="big">
     No vienes a hacer cosas.<br>
     Vienes a dejar de hacerlas.

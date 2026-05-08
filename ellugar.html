@@ -49,8 +49,8 @@ body {
   position: relative;
   height: 80vh;
   display: flex;
-  align-items: center; /* 🔥 CAMBIO */
-  padding: 0 8%;       /* 🔥 CAMBIO */
+  align-items: center;
+  padding: 0 8%;
   color: white;
   background: url('club7.jpg') center/cover no-repeat;
 }
@@ -76,14 +76,14 @@ body {
   max-width: 700px;
 }
 
-/* TEXTO GRANDE */
+/* TEXTO */
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
 }
 
-/* IMAGENES CINEMATOGRÁFICAS */
+/* IMAGENES */
 .full {
   height: 70vh;
   overflow: hidden;
@@ -109,6 +109,33 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* 🔥 CIERRE CON IMAGEN */
+.section.final-hero {
+  position: relative;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background: url('club77.jpg') center/cover no-repeat;
+}
+
+.section.final-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+}
+
+.section.final-hero .big {
+  position: relative;
+  z-index: 2;
 }
 
 /* RESPONSIVE */
@@ -169,8 +196,8 @@ body {
   </div>
 </section>
 
-<!-- CIERRE -->
-<section class="section">
+<!-- 🔥 CIERRE CON TU FOTO -->
+<section class="section final-hero">
   <div class="big">
     No vienes a hacer cosas.<br>
     Vienes a dejar de hacerlas.

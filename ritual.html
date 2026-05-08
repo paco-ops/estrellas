@@ -85,6 +85,13 @@ textarea {
   background: transparent;
 }
 
+.options label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
 /* BOTÓN */
 .button {
   margin-top: 40px;
@@ -161,17 +168,42 @@ textarea {
 
     <div class="question">
       <p>¿Qué te ha hecho escribirnos?</p>
-      <textarea name="q1" rows="2" required></textarea>
+      <textarea name="motivo" rows="2" required></textarea>
     </div>
 
     <div class="question">
-      <p>¿Qué tipo de lugares buscas… y por qué?</p>
-      <textarea name="q2" rows="2" required></textarea>
+      <p>¿Conduces eléctrico o gasolina?</p>
+      <div class="options">
+        <label><input type="radio" name="coche" value="electrico"> Eléctrico</label>
+        <label><input type="radio" name="coche" value="gasolina"> Gasolina</label>
+      </div>
     </div>
 
     <div class="question">
-      <p>¿Qué harías durante una semana aquí?</p>
-      <textarea name="q3" rows="2" required></textarea>
+      <p>¿Tienes hijos menores de 10 años?</p>
+      <div class="options">
+        <label><input type="radio" name="hijos" value="si"> Sí</label>
+        <label><input type="radio" name="hijos" value="no"> No</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>Del 1 al 10, ¿cuánto valoras el silencio?</p>
+      <textarea name="silencio" rows="1" placeholder="1-10"></textarea>
+    </div>
+
+    <div class="question">
+      <p>¿Te preocupa el impacto que dejamos en los lugares que visitamos?</p>
+      <div class="options">
+        <label><input type="radio" name="impacto" value="mucho"> Mucho</label>
+        <label><input type="radio" name="impacto" value="algo"> Algo</label>
+        <label><input type="radio" name="impacto" value="poco"> Poco</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>¿Cómo imaginas tu vida dentro de 10 años?</p>
+      <textarea name="futuro" rows="2"></textarea>
     </div>
 
     <button type="submit" class="button">

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso — ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+/* CONTENIDO */
+.wrapper {
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 0 20px;
+}
+
+.intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+
+.question {
+  margin-bottom: 40px;
+}
+
+.question p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+}
+
+/* BOTÓN */
+.button {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div><a href="index.html">ESTRELLAS</a></div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="intro">
+    Antes de seguir,<br>
+    queremos entender algo.
+  </div>
+
+  <div class="question">
+    <p>¿Qué te ha hecho escribirnos?</p>
+    <textarea id="q1" rows="2"></textarea>
+  </div>
+
+  <div class="question">
+    <p>¿Qué tipo de lugares buscas… y por qué?</p>
+    <textarea id="q2" rows="2"></textarea>
+  </div>
+
+  <div class="question">
+    <p>¿Qué harías durante una semana aquí?</p>
+    <textarea id="q3" rows="2"></textarea>
+  </div>
+
+  <div class="button" onclick="sendEmail()">
+    CONTINUAR
+  </div>
+
+</div>
+
+<script>
+function sendEmail() {
+  const q1 = encodeURIComponent(document.getElementById("q1").value);
+  const q2 = encodeURIComponent(document.getElementById("q2").value);
+  const q3 = encodeURIComponent(document.getElementById("q3").value);
+
+  const body = `Respuestas:\n\n1. ${q1}\n\n2. ${q2}\n\n3. ${q3}`;
+
+  window.location.href = `mailto:hola@clubestrellas.es?subject=Ritual%20de%20acceso&body=${body}`;
+}
+</script>
+
+</body>
+</html>

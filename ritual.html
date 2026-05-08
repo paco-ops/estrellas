@@ -93,7 +93,7 @@ textarea {
   font-size: 2rem;
   line-height: 1.4;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 </style>
 </head>
@@ -156,7 +156,7 @@ form.addEventListener('submit', async function(e) {
     }
   });
 
-  form.innerHTML = `
+  document.querySelector('.wrapper').innerHTML = `
     <div class="thankyou">
       Gracias.<br><br>
       Te diremos algo.

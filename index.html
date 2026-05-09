@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -19,6 +20,7 @@ body {
 }
 
 /* 🔒 PANTALLA ACCESO */
+
 .access {
   position: fixed;
   inset: 0;
@@ -59,6 +61,7 @@ body {
 }
 
 /* NAV */
+
 .nav {
   position: absolute;
   top: 20px;
@@ -85,6 +88,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -122,7 +126,10 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 3rem;
+  line-height: 1.15;
 }
+
+/* SECCIONES */
 
 .section {
   padding: 80px 8%;
@@ -132,7 +139,10 @@ h1 {
 .big-text {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
+  line-height: 1.4;
 }
+
+/* BOTÓN */
 
 .button {
   display: inline-block;
@@ -141,6 +151,8 @@ h1 {
   color: black;
   text-decoration: none;
 }
+
+/* VIDEO */
 
 .video-block {
   position: relative;
@@ -153,6 +165,77 @@ h1 {
   inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
+}
+
+/* FINAL LIFE BLOCK */
+
+.final-life {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  color: white;
+}
+
+.final-life img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.final-life-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.45)
+    );
+}
+
+.final-life-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8% 10%;
+}
+
+.final-life-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  max-width: 700px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 80vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .big-text {
+    font-size: 1.6rem;
+  }
+
+  .final-life {
+    height: 70vh;
+  }
+
+  .final-life-text {
+    font-size: 2rem;
+  }
+
 }
 
 </style>
@@ -161,28 +244,42 @@ h1 {
 <body>
 
 <!-- 🔒 ACCESO -->
+
 <div class="access" id="access">
   <div class="access-box">
     <h1>ESTRELLAS</h1>
+
     <input type="password" id="pass" placeholder="Acceso">
+
     <br>
+
     <button onclick="check()">Entrar</button>
   </div>
 </div>
 
 <!-- WEB -->
+
 <div id="site" style="display:none">
 
+<!-- NAV -->
+
 <nav class="nav">
-  <div><a href="#">ESTRELLAS</a></div>
+  <div>
+    <a href="#">ESTRELLAS</a>
+  </div>
+
   <div>
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
   </div>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <img src="club11.jpg">
+
   <div class="overlay"></div>
 
   <div class="content">
@@ -191,9 +288,13 @@ h1 {
       Y lugares a los que vuelves.
     </h1>
   </div>
+
 </section>
 
+<!-- TEXTO -->
+
 <section class="section">
+
   <div class="big-text">
     No es un hotel.<br>
     No es un retiro.<br>
@@ -203,36 +304,71 @@ h1 {
     Donde el tiempo se ralentiza.<br>
     Donde el silencio vuelve a tener sentido.
   </div>
+
 </section>
 
+<!-- VIDEO -->
+
 <section>
+
   <div class="video-block">
     <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
   </div>
+
 </section>
 
+<!-- NUEVO BLOQUE -->
+
+<section class="final-life">
+
+  <img src="pacoylucy.jpg">
+
+  <div class="final-life-overlay"></div>
+
+  <div class="final-life-content">
+
+    <div class="final-life-text">
+      Es como te gustaría vivir.
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CIERRE -->
+
 <section class="section">
+
   <div class="big-text">
     Es un destino.<br>
     Es un hogar.
   </div>
+
 </section>
 
 <section class="section">
+
   <a href="ellugar.html" class="button">
     CONTINUAR
   </a>
+
 </section>
 
 </div>
 
 <script>
+
 function check() {
+
   if (document.getElementById("pass").value === "estrellas") {
+
     document.getElementById("access").style.display = "none";
     document.getElementById("site").style.display = "block";
+
   }
+
 }
+
 </script>
 
 </body>

@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -19,6 +20,7 @@ body {
 }
 
 /* NAV */
+
 .nav {
   position: absolute;
   top: 20px;
@@ -45,6 +47,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   position: relative;
   height: 80vh;
@@ -59,7 +62,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)
+  );
 }
 
 .hero h1 {
@@ -68,22 +75,26 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 
-/* SECCIONES */
+/* SECTIONS */
+
 .section {
   padding: 80px 8%;
   max-width: 700px;
 }
 
-/* TEXTO */
+/* TEXT */
+
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 1.4;
 }
 
-/* IMÁGENES */
+/* IMAGES */
+
 .full {
   height: 70vh;
   overflow: hidden;
@@ -96,6 +107,7 @@ body {
 }
 
 /* VIDEO */
+
 .video {
   position: relative;
   width: 100%;
@@ -111,7 +123,38 @@ body {
   border: 0;
 }
 
-/* LINK CONTINUAR */
+/* FINAL HERO */
+
+.final-hero {
+  position: relative;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  width: 100%;
+  max-width: none;
+  background: url('/club77.jpg') center/cover no-repeat;
+}
+
+.final-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+}
+
+.final-hero .big {
+  position: relative;
+  z-index: 2;
+}
+
+/* CLEAN LINK */
+
 .link-continuar {
   color: #111;
   text-decoration: none;
@@ -126,31 +169,53 @@ body {
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
-  .hero { height: 60vh; }
-  .hero h1 { font-size: 1.8rem; }
-  .big { font-size: 1.6rem; }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .big {
+    font-size: 1.6rem;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
+
 <nav class="nav">
-  <div><a href="/en/index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="/en/index.html">ESTRELLAS</a>
+  </div>
+
   <div>
     <a href="/en/place.html">THE PLACE</a>
     <a href="/en/club.html">THE CLUB</a>
+    <a href="/index.html">ES</a>
   </div>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
-  <h1>Where nothing<br>interrupts you.</h1>
+  <h1>
+    Where nothing<br>
+    interrupts you.
+  </h1>
 </section>
 
-<!-- FRASE -->
+<!-- PHRASE -->
+
 <section class="section">
   <div class="big">
     Water.<br>
@@ -159,24 +224,27 @@ body {
   </div>
 </section>
 
-<!-- IMAGEN -->
+<!-- IMAGE -->
+
 <section class="full">
-  <img src="/club2.jpg">
+  <img src="/club5.jpg" alt="ESTRELLAS landscape">
 </section>
 
-<!-- FRASE -->
+<!-- PHRASE -->
+
 <section class="section">
   <div class="big">
-    Air<br>
-    Nature<br>
-    Where everything falls into place.
+    Air.<br>
+    Nature.<br>
+    Where everything fits effortlessly.
   </div>
 </section>
 
 <!-- VIDEO -->
+
 <section>
   <div class="video">
-    <iframe 
+    <iframe
       src="https://player.vimeo.com/video/1190237957?autoplay=1&muted=1&loop=1&background=1"
       allow="autoplay; fullscreen"
       allowfullscreen>
@@ -184,7 +252,8 @@ body {
   </div>
 </section>
 
-<!-- CIERRE -->
+<!-- CONTINUE -->
+
 <section class="section">
   <a href="/en/club.html" class="link-continuar">
     CONTINUE

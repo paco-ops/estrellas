@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 🔒 PANTALLA ACCESO */
+.access {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.access-box {
+  text-align: center;
+}
+
+.access-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.access-box input {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  text-align: center;
+  outline: none;
+}
+
+.access-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8% 5%;
+  color: white;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0)
+  );
+}
+
+.content {
+  position: relative;
+  max-width: 600px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
+}
+
+.big-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: rgba(255,255,255,0.9);
+  color: black;
+  text-decoration: none;
+}
+
+.video-block {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video-block iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔒 ACCESO -->
+<div class="access" id="access">
+  <div class="access-box">
+    <h1>ESTRELLAS</h1>
+    <input type="password" id="pass" placeholder="Acceso" onkeypress="if(event.key==='Enter'){check();}">
+    <br>
+    <button onclick="check()">Entrar</button>
+  </div>
+</div>
+
+<!-- WEB -->
+<div id="site" style="display:none">
+
+<nav class="nav">
+  <div><a href="#">ESTRELLAS</a></div>
+  <div>
+    <a href="/ellugar.html">EL LUGAR</a>
+    <a href="/elclub.html">EL CLUB</a>
+    <!-- FUTURO -->
+    <!-- <a href="/en/index.html">EN</a> -->
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="/estrellas.jpg">
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>
+      Hay lugares a los que vas.<br><br>
+      Y lugares a los que vuelves.
+    </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="big-text">
+    No es un hotel.<br>
+    No es un retiro.<br>
+    No es una casa rural.
+    <br><br><br>
+    Es un lugar donde el mundo se queda fuera.<br>
+    Donde el tiempo se ralentiza.<br>
+    Donde el silencio vuelve a tener sentido.
+  </div>
+</section>
+
+<section>
+  <div class="video-block">
+    <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
+  </div>
+</section>
+
+<section class="section">
+  <div class="big-text">
+    Es un destino.<br>
+    Es un hogar.
+  </div>
+</section>
+
+<section class="section">
+  <a href="/ellugar.html" class="button">
+    CONTINUAR
+  </a>
+</section>
+
+</div>
+
+<script>
+function check() {
+  if (document.getElementById("pass").value === "estrellas") {
+    document.getElementById("access").style.display = "none";
+    document.getElementById("site").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

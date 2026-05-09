@@ -81,7 +81,6 @@ body {
   text-decoration: none;
   margin-left: 20px;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -108,45 +107,29 @@ body {
   object-fit: cover;
 }
 
-/* CINEMATIC OVERLAY */
-
-.hero::before {
-  content: "";
+.overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(
-      to right,
-      rgba(0,0,0,0.48) 0%,
-      rgba(0,0,0,0.28) 22%,
-      rgba(0,0,0,0.10) 42%,
-      rgba(0,0,0,0.02) 65%,
-      rgba(0,0,0,0) 100%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.18) 0%,
-      rgba(0,0,0,0.02) 30%,
-      rgba(0,0,0,0.22) 100%
-    );
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0)
+  );
 }
 
 .content {
   position: relative;
   max-width: 600px;
-  z-index: 2;
 }
-
-/* TYPOGRAPHY */
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 3rem;
   line-height: 1.15;
-  letter-spacing: -0.02em;
 }
+
+/* SECTIONS */
 
 .section {
   padding: 80px 8%;
@@ -159,17 +142,14 @@ h1 {
   line-height: 1.4;
 }
 
+/* BUTTON */
+
 .button {
   display: inline-block;
   padding: 12px 28px;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.9);
   color: black;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: white;
 }
 
 /* VIDEO */
@@ -188,20 +168,53 @@ h1 {
   border: 0;
 }
 
+/* COUPLE IMAGE */
+
+.life-image {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.life-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FINAL BLOCK */
+
+.final-text {
+  padding: 120px 8%;
+  background: white;
+}
+
+.final-text .big-text {
+  max-width: 800px;
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {
 
+  .hero {
+    height: 80vh;
+  }
+
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .big-text {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
-  .nav {
-    font-size: 11px;
+  .life-image {
+    height: 60vh;
+  }
+
+  .final-text {
+    padding: 80px 8%;
   }
 
 }
@@ -214,80 +227,123 @@ h1 {
 <!-- ACCESS -->
 
 <div class="access" id="access">
+
   <div class="access-box">
+
     <h1>ESTRELLAS</h1>
 
-    <input
-      type="password"
-      id="pass"
-      placeholder="Access"
-      onkeypress="if(event.key==='Enter'){check();}"
-    >
+    <input type="password" id="pass" placeholder="Access">
 
     <br>
 
     <button onclick="check()">Enter</button>
+
   </div>
+
 </div>
 
-<!-- SITE -->
+<!-- WEBSITE -->
 
 <div id="site" style="display:none">
 
+<!-- NAV -->
+
 <nav class="nav">
+
   <div>
-    <a href="/en/index.html">ESTRELLAS</a>
+    <a href="#">ESTRELLAS</a>
   </div>
 
   <div>
-    <a href="/en/place.html">THE PLACE</a>
-    <a href="/en/club.html">THE CLUB</a>
+    <a href="place.html">THE PLACE</a>
+    <a href="club.html">THE CLUB</a>
     <a href="/index.html">ES</a>
   </div>
+
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
-  <img src="/club11.jpg" alt="ESTRELLAS">
+  <img src="club11.jpg">
+
+  <div class="overlay"></div>
 
   <div class="content">
+
     <h1>
       There are places you go.<br><br>
       And places you return to.
     </h1>
+
   </div>
 
 </section>
 
+<!-- TEXT -->
+
 <section class="section">
+
   <div class="big-text">
     Not a hotel.<br>
     Not a retreat.<br>
     Not a rural house.
     <br><br><br>
-    A place where the world fades away.<br>
+    A place where the world stays outside.<br>
     Where time slows down.<br>
-    Where silence becomes meaningful again.
+    Where silence starts to matter again.
   </div>
+
 </section>
 
+<!-- VIDEO -->
+
 <section>
+
   <div class="video-block">
     <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
   </div>
+
 </section>
 
+<!-- WHITE BLOCK -->
+
 <section class="section">
+
   <div class="big-text">
     It’s a destination.<br>
     It’s a home.
   </div>
+
 </section>
 
+<!-- COUPLE IMAGE -->
+
+<section class="life-image">
+
+  <img src="pacoylucy.jpg">
+
+</section>
+
+<!-- FINAL BLOCK -->
+
+<section class="final-text">
+
+  <div class="big-text">
+    It’s how you would want to live.
+  </div>
+
+</section>
+
+<!-- CONTINUE -->
+
 <section class="section">
-  <a href="/en/place.html" class="button">
+
+  <a href="place.html" class="button">
     CONTINUE
   </a>
+
 </section>
 
 </div>

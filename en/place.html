@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Place — ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+  background: url('/club7.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
+}
+
+/* TEXTO */
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+/* IMÁGENES */
+.full {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* VIDEO */
+.video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin: 40px 0;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* LINK CONTINUAR */
+.link-continuar {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.link-continuar:hover {
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .big { font-size: 1.6rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div><a href="/en/index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="/en/place.html">THE PLACE</a>
+    <a href="/en/club.html">THE CLUB</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Where nothing<br>interrupts you.</h1>
+</section>
+
+<!-- FRASE -->
+<section class="section">
+  <div class="big">
+    Water.<br>
+    Silence.<br>
+    Sky.
+  </div>
+</section>
+
+<!-- IMAGEN -->
+<section class="full">
+  <img src="/club5.jpg">
+</section>
+
+<!-- FRASE -->
+<section class="section">
+  <div class="big">
+    Air<br>
+    Nature<br>
+    Where everything falls into place.
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section>
+  <div class="video">
+    <iframe 
+      src="https://player.vimeo.com/video/1190237957?autoplay=1&muted=1&loop=1&background=1"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="section">
+  <a href="/en/club.html" class="link-continuar">
+    CONTINUE
+  </a>
+</section>
+
+</body>
+</html>

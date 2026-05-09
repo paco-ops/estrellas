@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -19,6 +20,7 @@ body {
 }
 
 /* NAV */
+
 .nav {
   position: absolute;
   top: 20px;
@@ -45,6 +47,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   position: relative;
   height: 80vh;
@@ -59,7 +62,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)
+  );
 }
 
 .hero h1 {
@@ -68,15 +75,18 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 /* SECCIONES */
+
 .section {
   padding: 80px 8%;
   max-width: 700px;
 }
 
 /* TEXTO */
+
 .big {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -84,6 +94,7 @@ body {
 }
 
 /* IMÁGENES */
+
 .full {
   height: 70vh;
   overflow: hidden;
@@ -96,6 +107,7 @@ body {
 }
 
 /* VIDEO */
+
 .video {
   position: relative;
   width: 100%;
@@ -111,36 +123,33 @@ body {
   border: 0;
 }
 
-/* 🔥 HERO FINAL */
-.final-hero {
-  position: relative;
-  color: white;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
+/* NUEVO BLOQUE SATÉLITE */
+
+.satellite {
   width: 100%;
-  max-width: none;
-  background: url('club8.jpg') center/cover no-repeat;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.final-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.6)
-  );
+.satellite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.final-hero .big {
-  position: relative;
-  z-index: 2;
+/* BLOQUE FINAL */
+
+.final-text {
+  padding: 120px 8%;
+  background: white;
 }
 
-/* 👇 NUEVO: LINK LIMPIO SOLO PARA CONTINUAR */
+.final-text .big {
+  max-width: 900px;
+}
+
+/* LINK CONTINUAR */
+
 .link-continuar {
   color: #111;
   text-decoration: none;
@@ -155,70 +164,136 @@ body {
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
-  .hero { height: 60vh; }
-  .hero h1 { font-size: 1.8rem; }
-  .big { font-size: 1.6rem; }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .big {
+    font-size: 1.6rem;
+  }
+
+  .satellite {
+    height: 60vh;
+  }
+
+  .final-text {
+    padding: 80px 8%;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
+
 <nav class="nav">
-  <div><a href="index.html">ESTRELLAS</a></div>
+
+  <div>
+    <a href="index.html">ESTRELLAS</a>
+  </div>
+
   <div>
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
   </div>
+
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
-  <h1>Donde nada <br> 
-    te interrumpe.</h1>
+
+  <h1>
+    Donde nada <br>
+    te interrumpe.
+  </h1>
+
 </section>
 
 <!-- FRASE -->
+
 <section class="section">
+
   <div class="big">
     Agua.<br>
     Silencio.<br>
     Cielo.
   </div>
+
 </section>
 
 <!-- IMAGEN -->
+
 <section class="full">
+
   <img src="club5.jpg">
+
 </section>
 
 <!-- FRASE -->
+
 <section class="section">
+
   <div class="big">
     Aire<br>
     Naturaleza<br>
     Donde todo encaja sin esfuerzo.
   </div>
+
 </section>
 
 <!-- VIDEO -->
+
 <section>
+
   <div class="video">
-    <iframe 
+
+    <iframe
       src="https://player.vimeo.com/video/1190237957?autoplay=1&muted=1&loop=1&background=1"
       allow="autoplay; fullscreen"
       allowfullscreen>
     </iframe>
+
   </div>
+
 </section>
 
-<!-- 🔥 CIERRE CORRECTO -->
+<!-- NUEVA IMAGEN SATÉLITE -->
+
+<section class="satellite">
+
+  <img src="lagoespacio.jpg">
+
+</section>
+
+<!-- NUEVO CIERRE -->
+
+<section class="final-text">
+
+  <div class="big">
+    Todavía existen lugares así.
+  </div>
+
+</section>
+
+<!-- CONTINUAR -->
+
 <section class="section">
+
   <a href="elclub.html" class="link-continuar">
     CONTINUAR
   </a>
+
 </section>
 
 </body>

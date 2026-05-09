@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Club — ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+  background: url('/club6.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
+}
+
+/* TEXTO */
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+/* IMAGEN FULL */
+.full img {
+  width: 100%;
+  display: block;
+}
+
+/* BOTÓN */
+.button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .big { font-size: 1.6rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div><a href="/en/index.html">ESTRELLAS</a></div>
+  <div>
+    <a href="/en/place.html">THE PLACE</a>
+    <a href="/en/club.html">THE CLUB</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    For those who understand the value<br> 
+    of a dark sky.
+  </h1>
+</section>
+
+<!-- BLOQUE 1 -->
+<section class="section">
+  <div class="big">
+    You arrive, and you don’t want to leave.<br>
+    You don’t need anything else.
+  </div>
+</section>
+
+<!-- IMAGEN 1 -->
+<section class="full">
+  <img src="/club1.jpg">
+</section>
+
+<!-- BLOQUE 2 -->
+<section class="section">
+  <div class="big">
+    It’s not booked.<br>
+    It’s accessed.
+  </div>
+</section>
+
+<!-- IMAGEN 2 -->
+<section class="full">
+  <img src="/club2.jpg">
+</section>
+
+<!-- BLOQUE 3 -->
+<section class="section">
+  <div class="big">
+    You don’t choose when to come.<br>
+    The moment arrives.
+  </div>
+</section>
+
+<!-- IMAGEN 3 -->
+<section class="full">
+  <img src="/club3.jpg">
+</section>
+
+<!-- BLOQUE 4 -->
+<section class="section">
+  <div class="big">
+    You’re not looking for experiences.<br>
+    You’re looking to reconnect.
+  </div>
+</section>
+
+<!-- IMAGEN 4 -->
+<section class="full">
+  <img src="/club4.jpg">
+</section>
+
+<!-- CIERRE -->
+<section class="section">
+  <div class="big">
+    If you’ve come this far,<br>
+    you already know enough.
+  </div>
+
+  <a href="/en/access.html" class="button">
+    ENTER
+  </a>
+</section>
+
+</body>
+</html>

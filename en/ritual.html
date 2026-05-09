@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access — ESTRELLAS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+/* CONTENIDO */
+.wrapper {
+  max-width: 700px;
+  margin: 140px auto;
+  padding: 0 20px;
+}
+
+/* INTRO */
+.intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+/* BLOQUE CONTEXTO */
+.section {
+  margin-bottom: 80px;
+}
+
+.big {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  line-height: 1.5;
+}
+
+/* PREGUNTAS */
+.question {
+  margin-bottom: 50px;
+}
+
+.question p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+textarea, input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* BOTÓN */
+.button {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+/* THANK YOU */
+.thankyou {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 200px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 100px auto;
+  }
+
+  .intro,
+  .big {
+    font-size: 1.6rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div><a href="/en/index.html">ESTRELLAS</a></div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="intro">
+    Before continuing,<br>
+    it’s worth clarifying something.
+  </div>
+
+  <div class="section">
+    <div class="big">
+      ESTRELLAS is not a place you access openly.<br><br>
+
+      We are not looking for everyone.<br>
+      And not everyone is looking for this.<br><br>
+
+      Taking care of the place is part of being here.<br>
+      Not only the environment,<br>
+      but also the people who share it.<br><br>
+
+      This process is not a formality.<br>
+      It’s a way to understand if it makes sense to continue.<br><br>
+
+      If you don’t see yourself here,<br>
+      it’s better to stop now.
+    </div>
+  </div>
+
+  <form id="ritual-form" action="https://formspree.io/f/xpqbyzqq" method="POST">
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="question">
+      <p>What made you reach out to us?</p>
+      <textarea name="motivo" rows="2" required></textarea>
+    </div>
+
+    <div class="question">
+      <p>Do you drive electric or petrol?</p>
+      <div class="options">
+        <label><input type="radio" name="coche" value="electric"> Electric</label>
+        <label><input type="radio" name="coche" value="petrol"> Petrol</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>Do you have children under 15?</p>
+      <div class="options">
+        <label><input type="radio" name="hijos" value="yes"> Yes</label>
+        <label><input type="radio" name="hijos" value="no"> No</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>From 1 to 10, how much do you value silence?</p>
+      <textarea name="silencio" rows="1" placeholder="1-10"></textarea>
+    </div>
+
+    <div class="question">
+      <p>Do you care about the impact we leave on the places we visit?</p>
+      <div class="options">
+        <label><input type="radio" name="impacto" value="a_lot"> A lot</label>
+        <label><input type="radio" name="impacto" value="somewhat"> Somewhat</label>
+        <label><input type="radio" name="impacto" value="little"> Little</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>How do you imagine your life in 10 years?</p>
+      <textarea name="futuro" rows="2"></textarea>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="question">
+      <p>Full name</p>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="question">
+      <p>Email</p>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="question">
+      <p>Phone</p>
+      <input type="tel" name="phone">
+    </div>
+
+    <div class="question">
+      <p>City of residence</p>
+      <input type="text" name="city">
+    </div>
+
+    <button type="submit" class="button">
+      CONTINUE
+    </button>
+
+  </form>
+
+</div>
+
+<script>
+const form = document.getElementById('ritual-form');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  document.querySelector('.wrapper').innerHTML = `
+    <div class="thankyou">
+      Thank you.<br><br>
+      We’ll be in touch.
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

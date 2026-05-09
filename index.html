@@ -18,6 +18,46 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* 🔒 PANTALLA ACCESO */
+.access {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.access-box {
+  text-align: center;
+}
+
+.access-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.access-box input {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  text-align: center;
+  outline: none;
+}
+
+.access-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
 /* NAV */
 .nav {
   position: absolute;
@@ -38,7 +78,6 @@ body {
   text-decoration: none;
   margin-left: 20px;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -56,106 +95,57 @@ body {
   overflow: hidden;
 }
 
-/* IMAGEN */
 .hero img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 
-/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.25) 35%,
-    rgba(0,0,0,0) 70%
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0)
   );
-  z-index: 1;
 }
 
-/* FADE */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 60px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 60%,
-    rgba(255,255,255,0.85) 100%
-  );
-  z-index: 2;
-}
-
-/* CONTENIDO */
 .content {
   position: relative;
-  z-index: 3;
   max-width: 600px;
 }
 
-/* TITULOS */
-h1,
-.big-text {
-  font-family: 'Playfair Display', serif;
-}
-
-/* TITULAR HERO */
 h1 {
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
 }
 
-/* SUB */
-.sub {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 30px;
+.section {
+  padding: 80px 8%;
+  max-width: 700px;
 }
 
-/* BOTÓN */
+.big-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
 .button {
   display: inline-block;
   padding: 12px 28px;
   background: rgba(255,255,255,0.9);
   color: black;
   text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
 }
 
-/* SECCIONES */
-.section {
-  padding: 80px 8%;
-  max-width: 700px;
-}
-
-/* 🔥 AJUSTE SOLO PARA EL SEGUNDO BLOQUE */
-.section.tight {
-  padding-top: 40px;
-  padding-bottom: 80px;
-}
-
-/* TEXTO GRANDE */
-.big-text {
-  font-size: 2rem;
-  line-height: 1.4;
-}
-
-/* VIDEO */
 .video-block {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  margin: 40px 0;
 }
 
 .video-block iframe {
@@ -163,85 +153,64 @@ h1 {
   inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-  .nav {
-    font-size: 12px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .big-text {
-    font-size: 1.6rem;
-  }
-
-  .hero {
-    padding: 0 8% 10%;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- 🔒 ACCESO -->
+<div class="access" id="access">
+  <div class="access-box">
+    <h1>ESTRELLAS</h1>
+    <input type="password" id="pass" placeholder="Acceso">
+    <br>
+    <button onclick="check()">Entrar</button>
+  </div>
+</div>
+
+<!-- WEB -->
+<div id="site" style="display:none">
+
 <nav class="nav">
-  <div><a href="index.html">ESTRELLAS</a></div>
+  <div><a href="#">ESTRELLAS</a></div>
   <div>
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-
   <img src="estrellas.jpg">
-
   <div class="overlay"></div>
 
   <div class="content">
-
     <h1>
       Hay lugares a los que vas.<br><br>
       Y lugares a los que vuelves.
     </h1>
-    
   </div>
-
 </section>
 
-<!-- BLOQUE 2 -->
 <section class="section">
   <div class="big-text">
     No es un hotel.<br>
     No es un retiro.<br>
     No es una casa rural.
- <br><br><br>
+    <br><br><br>
     Es un lugar donde el mundo se queda fuera.<br>
     Donde el tiempo se ralentiza.<br>
     Donde el silencio vuelve a tener sentido.
   </div>
 </section>
 
-<!-- VIDEO -->
 <section>
   <div class="video-block">
-    <iframe 
-      src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>
+    <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
   </div>
 </section>
-<!-- CIERRE -->
+
 <section class="section">
   <div class="big-text">
     Es un destino.<br>
@@ -249,12 +218,22 @@ h1 {
   </div>
 </section>
 
-<!-- CTA SUAVE -->
 <section class="section">
   <a href="ellugar.html" class="button">
     CONTINUAR
   </a>
 </section>
+
+</div>
+
+<script>
+function check() {
+  if (document.getElementById("pass").value === "estrellas") {
+    document.getElementById("access").style.display = "none";
+    document.getElementById("site").style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>

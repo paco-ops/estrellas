@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ACCESS */
+/* 🔒 ACCESS */
 
 .access {
   position: fixed;
@@ -168,7 +168,7 @@ h1 {
   border: 0;
 }
 
-/* COUPLE IMAGE */
+/* FULL IMAGES */
 
 .life-image {
   width: 100%;
@@ -182,40 +182,26 @@ h1 {
   object-fit: cover;
 }
 
-/* FINAL BLOCK */
+/* FINAL */
 
 .final-text {
   padding: 120px 8%;
   background: white;
 }
 
-.final-text .big-text {
-  max-width: 800px;
-}
-
 /* MOBILE */
 
 @media (max-width: 768px) {
 
-  .hero {
-    height: 80vh;
-  }
+  .hero { height: 80vh; }
 
-  h1 {
-    font-size: 2rem;
-  }
+  h1 { font-size: 2rem; }
 
-  .big-text {
-    font-size: 1.6rem;
-  }
+  .big-text { font-size: 1.6rem; }
 
-  .life-image {
-    height: 60vh;
-  }
+  .life-image { height: 60vh; }
 
-  .final-text {
-    padding: 80px 8%;
-  }
+  .final-text { padding: 80px 8%; }
 
 }
 
@@ -227,140 +213,140 @@ h1 {
 <!-- ACCESS -->
 
 <div class="access" id="access">
-
   <div class="access-box">
-
     <h1>ESTRELLAS</h1>
-
     <input type="password" id="pass" placeholder="Access">
-
     <br>
-
     <button onclick="check()">Enter</button>
-
   </div>
-
 </div>
-
-<!-- WEBSITE -->
 
 <div id="site" style="display:none">
 
 <!-- NAV -->
 
 <nav class="nav">
-
+  <div><a href="#">ESTRELLAS</a></div>
   <div>
-    <a href="/en/index.html">ESTRELLAS</a>
+    <a href="theplace.html">THE PLACE</a>
+    <a href="theclub.html">THE CLUB</a>
   </div>
-
-  <div>
-    <a href="/en/place.html">THE PLACE</a>
-    <a href="/en/club.html">THE CLUB</a>
-    <a href="/index.html">ES</a>
-  </div>
-
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
-  <img src="/club11.jpg">
-
+  <img src="club11.jpg">
   <div class="overlay"></div>
-
   <div class="content">
-
     <h1>
-      There are places you go.<br><br>
-      And places you return to.
+      Some places you visit.<br><br>
+      Others you return to.
     </h1>
-
   </div>
-
 </section>
 
-<!-- TEXT -->
+<!-- TEXT 1 -->
 
 <section class="section">
-
   <div class="big-text">
-    Not a hotel.<br>
-    Not a retreat.<br>
-    Not a rural house.
+    We live surrounded by noise.<br><br>
+
+    Screens.<br>
+    Notifications.<br>
+    Constant speed.<br><br>
+
+    And finding a place where you can truly switch off<br>
+    is becoming harder and harder.
+  </div>
+</section>
+
+<!-- IMAGE 1 -->
+
+<section class="life-image">
+  <img src="club1.jpg">
+</section>
+
+<!-- TEXT 2 -->
+
+<section class="section">
+  <div class="big-text">
+    ESTRELLAS wasn’t created from an opportunity.<br><br>
+
+    It came from a need:<br>
+    for the world to slow down again.
+  </div>
+</section>
+
+<!-- IMAGE 2 -->
+
+<section class="life-image">
+  <img src="club5.jpg">
+</section>
+
+<!-- ORIGINAL TEXT -->
+
+<section class="section">
+  <div class="big-text">
+    It’s not a hotel.<br>
+    It’s not a retreat.<br>
+    It’s not a countryside escape.
     <br><br><br>
-    A place where the world stays outside.<br>
-    Where time slows down.<br>
+    It’s a place where the outside world fades away.<br>
+    Where time begins to slow.<br>
     Where silence starts to matter again.
   </div>
-
 </section>
 
 <!-- VIDEO -->
 
 <section>
-
   <div class="video-block">
     <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
   </div>
-
 </section>
 
-<!-- WHITE BLOCK -->
+<!-- MODEL -->
 
 <section class="section">
-
   <div class="big-text">
-    It’s a destination.<br>
-    It’s a home.
+    Two moments each year.<br><br>
+    Always waiting for you.
   </div>
-
 </section>
 
-<!-- COUPLE IMAGE -->
+<!-- COUPLE -->
 
 <section class="life-image">
-
-  <img src="/pacoylucy.jpg">
-
+  <img src="pacoylucy.jpg">
 </section>
 
-<!-- FINAL BLOCK -->
+<!-- FINAL -->
 
 <section class="final-text">
-
   <div class="big-text">
-    It’s how you would want to live.
+    It’s not a place you simply come to.<br><br>
+    It’s a place you return to.
   </div>
-
 </section>
 
-<!-- CONTINUE -->
+<!-- CTA -->
 
 <section class="section">
-
-  <a href="/en/place.html" class="button">
+  <a href="theplace.html" class="button">
     CONTINUE
   </a>
-
 </section>
 
 </div>
 
 <script>
-
 function check() {
-
   if (document.getElementById("pass").value === "estrellas") {
-
     document.getElementById("access").style.display = "none";
     document.getElementById("site").style.display = "block";
-
   }
-
 }
-
 </script>
 
 </body>

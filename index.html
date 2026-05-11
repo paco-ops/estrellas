@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 🔒 PANTALLA ACCESO */
+/* 🔒 ACCESO */
 
 .access {
   position: fixed;
@@ -168,7 +168,7 @@ h1 {
   border: 0;
 }
 
-/* FOTO PAREJA */
+/* IMÁGENES FULL */
 
 .life-image {
   width: 100%;
@@ -182,40 +182,26 @@ h1 {
   object-fit: cover;
 }
 
-/* BLOQUE FINAL */
+/* FINAL */
 
 .final-text {
   padding: 120px 8%;
   background: white;
 }
 
-.final-text .big-text {
-  max-width: 800px;
-}
-
 /* MOBILE */
 
 @media (max-width: 768px) {
 
-  .hero {
-    height: 80vh;
-  }
+  .hero { height: 80vh; }
 
-  h1 {
-    font-size: 2rem;
-  }
+  h1 { font-size: 2rem; }
 
-  .big-text {
-    font-size: 1.6rem;
-  }
+  .big-text { font-size: 1.6rem; }
 
-  .life-image {
-    height: 60vh;
-  }
+  .life-image { height: 60vh; }
 
-  .final-text {
-    padding: 80px 8%;
-  }
+  .final-text { padding: 80px 8%; }
 
 }
 
@@ -224,63 +210,43 @@ h1 {
 
 <body>
 
-<!-- 🔒 ACCESO -->
+<!-- ACCESO -->
 
 <div class="access" id="access">
-
   <div class="access-box">
-
     <h1>ESTRELLAS</h1>
-
     <input type="password" id="pass" placeholder="Acceso">
-
     <br>
-
     <button onclick="check()">Entrar</button>
-
   </div>
-
 </div>
-
-<!-- WEB -->
 
 <div id="site" style="display:none">
 
 <!-- NAV -->
 
 <nav class="nav">
-
-  <div>
-    <a href="#">ESTRELLAS</a>
-  </div>
-
+  <div><a href="#">ESTRELLAS</a></div>
   <div>
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
   </div>
-
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
   <img src="club11.jpg">
-
   <div class="overlay"></div>
-
   <div class="content">
-
     <h1>
       Hay lugares a los que vas.<br><br>
       Y lugares a los que vuelves.
     </h1>
-
   </div>
-
 </section>
 
-<!-- 🔥 NUEVO BLOQUE (PROBLEMA) -->
+<!-- TEXTO 1 -->
 
 <section class="section">
   <div class="big-text">
@@ -295,7 +261,13 @@ h1 {
   </div>
 </section>
 
-<!-- 🔥 NUEVO BLOQUE (ORIGEN) -->
+<!-- IMAGEN 1 -->
+
+<section class="life-image">
+  <img src="club2.jpg">
+</section>
+
+<!-- TEXTO 2 -->
 
 <section class="section">
   <div class="big-text">
@@ -306,10 +278,15 @@ h1 {
   </div>
 </section>
 
-<!-- BLOQUE ORIGINAL -->
+<!-- IMAGEN 2 -->
+
+<section class="life-image">
+  <img src="club3.jpg">
+</section>
+
+<!-- TEXTO ORIGINAL -->
 
 <section class="section">
-
   <div class="big-text">
     No es un hotel.<br>
     No es un retiro.<br>
@@ -319,20 +296,23 @@ h1 {
     Donde el tiempo se ralentiza.<br>
     Donde el silencio vuelve a tener sentido.
   </div>
+</section>
 
+<!-- IMAGEN 3 -->
+
+<section class="life-image">
+  <img src="club5.jpg">
 </section>
 
 <!-- VIDEO -->
 
 <section>
-
   <div class="video-block">
     <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
   </div>
-
 </section>
 
-<!-- 🔥 NUEVO BLOQUE (MODELO) -->
+<!-- MODELO -->
 
 <section class="section">
   <div class="big-text">
@@ -341,50 +321,44 @@ h1 {
   </div>
 </section>
 
-<!-- FOTO PAREJA -->
+<!-- IMAGEN 4 -->
 
 <section class="life-image">
-
-  <img src="pacoylucy.jpg">
-
+  <img src="club4.jpg">
 </section>
 
-<!-- BLOQUE FINAL -->
+<!-- PAREJA -->
+
+<section class="life-image">
+  <img src="pacoylucy.jpg">
+</section>
+
+<!-- FINAL -->
 
 <section class="final-text">
-
   <div class="big-text">
     No es un lugar al que vienes.<br><br>
     Es un lugar al que vuelves.
   </div>
-
 </section>
 
-<!-- CONTINUAR -->
+<!-- CTA -->
 
 <section class="section">
-
   <a href="ellugar.html" class="button">
     CONTINUAR
   </a>
-
 </section>
 
 </div>
 
 <script>
-
 function check() {
-
   if (document.getElementById("pass").value === "estrellas") {
-
     document.getElementById("access").style.display = "none";
     document.getElementById("site").style.display = "block";
-
   }
-
 }
-
 </script>
 
 </body>

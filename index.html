@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ESTRELLAS</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,252 +14,372 @@
 
 <style>
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #fff;
+  background: #f3eadc;
   color: #111;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* 🔒 ACCESS */
+/* ========================= */
+/* ACCESS */
+/* ========================= */
 
 .access {
   position: fixed;
   inset: 0;
-  background: #ede3d3;
-  overflow: hidden;
+  z-index: 9999;
+
+  background-color: #efe5d6;
+  background-image: url('paper-texture.jpg');
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-}
-
-.access::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
-  background-size: 3px 3px;
-  opacity: 0.45;
 }
 
 .access-box {
-  position: relative;
-  text-align: center;
   width: 100%;
-  max-width: 460px;
-  padding: 40px;
-  z-index: 2;
+  max-width: 500px;
+  padding: 60px;
+  text-align: center;
 }
 
 .access-logo {
-  width: 420px;
-  max-width: 85vw;
-  margin-bottom: 90px;
-  opacity: 0.96;
+  width: 520px;
+  max-width: 92vw;
+  opacity: 0.94;
+  margin-bottom: 100px;
+
+  mix-blend-mode: multiply;
 }
 
 .access-subtitle {
-  font-size: 11px;
-  letter-spacing: 4px;
+  font-size: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  color: rgba(70,60,50,0.6);
-  margin-bottom: 30px;
+  color: rgba(60,50,40,0.6);
+  margin-bottom: 34px;
 }
 
 .access-box input {
+
   width: 100%;
+
   background: transparent;
+
   border: none;
-  border-bottom: 1px solid rgba(70,60,50,0.25);
-  padding: 16px 0;
+  border-bottom: 1px solid rgba(70,60,50,0.22);
+
+  padding: 18px 0;
+
   text-align: center;
-  font-size: 14px;
-  color: #4d433a;
+
+  font-size: 13px;
+  letter-spacing: 3px;
+
+  color: #5d5146;
+
   outline: none;
+
   font-family: 'Inter', sans-serif;
-  letter-spacing: 2px;
 }
 
 .access-box input::placeholder {
-  color: rgba(70,60,50,0.4);
+  color: rgba(70,60,50,0.38);
   letter-spacing: 2px;
 }
 
 .access-box button {
-  margin-top: 40px;
+
+  margin-top: 46px;
+
   background: transparent;
   border: none;
-  color: #4d433a;
-  font-size: 11px;
-  letter-spacing: 5px;
+
+  font-size: 10px;
+  letter-spacing: 6px;
+
+  color: rgba(60,50,40,0.72);
+
   cursor: pointer;
-  opacity: 0.7;
+
   transition: opacity 0.3s ease;
 }
 
 .access-box button:hover {
-  opacity: 1;
+  opacity: 0.55;
 }
 
+/* ========================= */
+/* SITE */
+/* ========================= */
+
+#site {
+  display: none;
+}
+
+/* ========================= */
 /* NAV */
+/* ========================= */
 
 .nav {
+
   position: absolute;
-  top: 20px;
+
+  top: 24px;
   left: 8%;
   right: 8%;
+
+  z-index: 10;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
-  color: white;
-  font-size: 13px;
-  letter-spacing: 1px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
 }
 
 .nav a {
+
   color: white;
   text-decoration: none;
-  margin-left: 20px;
-  opacity: 0.85;
+
+  opacity: 0.78;
+
+  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
   opacity: 1;
 }
 
+.nav-right a {
+  margin-left: 26px;
+}
+
+/* ========================= */
 /* HERO */
+/* ========================= */
 
 .hero {
+
   position: relative;
+
   height: 100vh;
+
+  overflow: hidden;
+
   display: flex;
   align-items: center;
-  padding: 0 8% 5%;
-  color: white;
-  overflow: hidden;
+
+  padding: 0 8%;
 }
 
 .hero img {
+
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
 .overlay {
+
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+
+  background:
+  linear-gradient(
     to right,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0)
+    rgba(0,0,0,0.58),
+    rgba(0,0,0,0.12)
   );
 }
 
-.content {
+.hero-content {
+
   position: relative;
-  max-width: 600px;
+  z-index: 2;
+
+  max-width: 720px;
 }
 
-h1 {
+.hero h1 {
+
+  margin: 0;
+
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: 3rem;
-  line-height: 1.15;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+
+  color: white;
 }
 
-/* SECCIONES */
+/* ========================= */
+/* TEXT SECTIONS */
+/* ========================= */
 
 .section {
-  padding: 120px 8%;
-  max-width: 700px;
+
+  padding: 160px 8%;
+
+  max-width: 760px;
 }
 
 .big-text {
+
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
+
+  font-size: clamp(2rem, 3vw, 3.4rem);
+
   line-height: 1.45;
+
+  color: #221d18;
 }
 
-/* BOTÓN */
+/* ========================= */
+/* IMAGE */
+/* ========================= */
 
-.button {
-  display: inline-block;
-  padding: 12px 28px;
-  background: rgba(255,255,255,0.9);
-  color: black;
-  text-decoration: none;
+.life-image {
+
+  width: 100%;
+  height: 92vh;
+
+  overflow: hidden;
 }
 
+.life-image img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ========================= */
 /* VIDEO */
+/* ========================= */
 
 .video-block {
+
   position: relative;
+
   width: 100%;
   padding-top: 56.25%;
 }
 
 .video-block iframe {
+
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   border: 0;
 }
 
-/* IMÁGENES FULL */
-
-.life-image {
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-}
-
-.life-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* ========================= */
 /* FINAL */
+/* ========================= */
 
 .final-text {
-  padding: 140px 8%;
-  background: white;
+
+  padding: 220px 8% 180px;
+
+  background: #f3eadc;
 }
 
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.cta {
+
+  padding: 0 8% 180px;
+}
+
+.button {
+
+  display: inline-block;
+
+  padding: 18px 34px;
+
+  border: 1px solid rgba(40,30,20,0.18);
+
+  text-decoration: none;
+
+  font-size: 10px;
+  letter-spacing: 5px;
+
+  color: #2d261f;
+
+  transition:
+  background 0.3s ease,
+  color 0.3s ease;
+}
+
+.button:hover {
+
+  background: #2d261f;
+  color: #f3eadc;
+}
+
+/* ========================= */
 /* MOBILE */
+/* ========================= */
 
 @media (max-width: 768px) {
 
   .hero {
-    height: 80vh;
+    height: 84vh;
   }
 
-  h1 {
-    font-size: 2rem;
+  .section {
+    padding: 110px 8%;
   }
 
   .big-text {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .life-image {
-    height: 60vh;
+    height: 64vh;
   }
 
   .final-text {
-    padding: 80px 8%;
+    padding: 140px 8% 120px;
+  }
+
+  .access-box {
+    padding: 40px;
   }
 
   .access-logo {
-    width: 300px;
+    width: 360px;
     margin-bottom: 70px;
+  }
+
+  .nav {
+    font-size: 10px;
+    letter-spacing: 2px;
   }
 
 }
@@ -273,15 +395,18 @@ h1 {
 
   <div class="access-box">
 
-    <img src="logo-estrellas.png" class="access-logo">
+    <img 
+      src="logo-estrellas-transparent.png"
+      class="access-logo"
+    >
 
     <div class="access-subtitle">
       Acceso privado
     </div>
 
-    <input 
-      type="password" 
-      id="pass" 
+    <input
+      type="password"
+      id="pass"
       placeholder="Código de acceso"
     >
 
@@ -293,102 +418,139 @@ h1 {
 
 </div>
 
-<div id="site" style="display:none">
+<!-- SITE -->
+
+<div id="site">
 
 <!-- NAV -->
 
 <nav class="nav">
-  <div><a href="#">ESTRELLAS</a></div>
+
   <div>
+    <a href="#">ESTRELLAS</a>
+  </div>
+
+  <div class="nav-right">
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
+    <a href="acceso.html">ACCESO</a>
   </div>
+
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
+
   <img src="club11.jpg">
+
   <div class="overlay"></div>
 
-  <div class="content">
+  <div class="hero-content">
+
     <h1>
       Hay lugares a los que vas.<br><br>
       Y lugares a los que vuelves.
     </h1>
+
   </div>
+
 </section>
 
-<!-- TEXTO -->
+<!-- SECTION -->
 
 <section class="section">
+
   <div class="big-text">
+
     Vivimos rodeados de ruido.<br><br>
 
     Pantallas.<br>
     Notificaciones.<br>
     Velocidad.<br><br>
 
-    Y cada vez es más difícil encontrar<br>
+    Y cada vez es más difícil encontrar
     un lugar donde desconectar de verdad.
+
   </div>
+
 </section>
 
-<!-- IMAGEN -->
+<!-- IMAGE -->
 
 <section class="life-image">
   <img src="club1.jpg">
 </section>
 
-<!-- TEXTO -->
+<!-- SECTION -->
 
 <section class="section">
+
   <div class="big-text">
+
     ESTRELLAS no nace de una oportunidad.<br><br>
 
     Nace de una necesidad:<br>
     que bajes el ritmo.
+
   </div>
+
 </section>
 
-<!-- IMAGEN -->
+<!-- IMAGE -->
 
 <section class="life-image">
   <img src="club5.jpg">
 </section>
 
-<!-- TEXTO -->
+<!-- SECTION -->
 
 <section class="section">
+
   <div class="big-text">
+
     No es un hotel.<br>
     No es un retiro.<br>
     No es una casa rural.
     <br><br><br>
+
     Es un lugar donde el mundo se queda fuera.<br>
     Donde el tiempo se ralentiza.<br>
     Donde el silencio vuelve a tener sentido.
+
   </div>
+
 </section>
 
 <!-- VIDEO -->
 
 <section>
+
   <div class="video-block">
-    <iframe src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1"></iframe>
+
+    <iframe
+      src="https://player.vimeo.com/video/1190233687?autoplay=1&muted=1&loop=1&background=1">
+    </iframe>
+
   </div>
+
 </section>
 
-<!-- MODELO -->
+<!-- SECTION -->
 
 <section class="section">
+
   <div class="big-text">
+
     Dos momentos al año.<br><br>
+
     Siempre reservados.
+
   </div>
+
 </section>
 
-<!-- PAREJA -->
+<!-- IMAGE -->
 
 <section class="life-image">
   <img src="pacoylucy.jpg">
@@ -397,18 +559,25 @@ h1 {
 <!-- FINAL -->
 
 <section class="final-text">
+
   <div class="big-text">
+
     Hay lugares que desaparecen cuando te marchas.<br><br>
+
     Y otros que permanecen contigo para siempre.
+
   </div>
+
 </section>
 
 <!-- CTA -->
 
-<section class="section">
+<section class="cta">
+
   <a href="ellugar.html" class="button">
     CONTINUAR
   </a>
+
 </section>
 
 </div>

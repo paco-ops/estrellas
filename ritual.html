@@ -7,114 +7,174 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body {
+
   margin: 0;
+
   font-family: 'Inter', sans-serif;
-  background: #fff;
+
+  background-color: #efe5d6;
+  background-image: url('paper-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   color: #111;
+
   -webkit-font-smoothing: antialiased;
 }
 
 /* NAV */
+
 .nav {
+
   position: absolute;
+
   top: 20px;
   left: 8%;
   right: 8%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   font-size: 13px;
   letter-spacing: 1px;
 }
 
 .nav a {
+
   color: #111;
+
   text-decoration: none;
+
   opacity: 0.85;
 }
 
 /* CONTENIDO */
+
 .wrapper {
+
   max-width: 700px;
+
   margin: 140px auto;
+
   padding: 0 20px;
 }
 
 /* INTRO */
+
 .intro {
+
   font-family: 'Playfair Display', serif;
+
   font-size: 2rem;
   line-height: 1.4;
+
   margin-bottom: 40px;
 }
 
 /* BLOQUE CONTEXTO */
+
 .section {
   margin-bottom: 80px;
 }
 
 .big {
+
   font-family: 'Playfair Display', serif;
+
   font-size: 1.9rem;
   line-height: 1.5;
 }
 
 /* PREGUNTAS */
+
 .question {
   margin-bottom: 50px;
 }
 
 .question p {
+
   font-size: 1.1rem;
+
   margin-bottom: 10px;
 }
 
-textarea, input {
+textarea,
+input {
+
   width: 100%;
+
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(60,50,40,0.22);
+
   padding: 10px 0;
+
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
+
   outline: none;
+
   background: transparent;
 }
 
 .options label {
+
   display: block;
+
   margin-bottom: 6px;
+
   font-size: 0.95rem;
+
   cursor: pointer;
 }
 
 /* BOTÓN */
+
 .button {
+
   margin-top: 40px;
+
   display: inline-block;
+
   padding: 12px 28px;
+
   background: #111;
+
   color: white;
+
   font-size: 0.9rem;
   letter-spacing: 1px;
+
   border: none;
+
   cursor: pointer;
 }
 
 /* THANK YOU */
+
 .thankyou {
+
   font-family: 'Playfair Display', serif;
+
   font-size: 2rem;
   line-height: 1.4;
+
   text-align: center;
+
   margin-top: 200px;
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
   .wrapper {
     margin: 100px auto;
   }
@@ -123,25 +183,35 @@ textarea, input {
   .big {
     font-size: 1.6rem;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <nav class="nav">
-  <div><a href="index.html">ESTRELLAS</a></div>
+
+  <div>
+    <a href="index.html">ESTRELLAS</a>
+  </div>
+
 </nav>
 
 <div class="wrapper">
 
   <div class="intro">
+
     Antes de seguir,<br>
     merece la pena aclarar algo.
+
   </div>
 
   <div class="section">
+
     <div class="big">
+
       ESTRELLAS no es un lugar al que se accede de forma abierta.<br><br>
 
       No buscamos a todo el mundo.<br>
@@ -156,7 +226,9 @@ textarea, input {
 
       Si no te ves aquí,<br>
       es mejor dejarlo ahora.
+
     </div>
+
   </div>
 
   <form id="ritual-form" action="https://formspree.io/f/xpqbyzqq" method="POST">
@@ -170,18 +242,41 @@ textarea, input {
 
     <div class="question">
       <p>¿Conduces eléctrico o gasolina?</p>
+
       <div class="options">
-        <label><input type="radio" name="coche" value="electrico"> Eléctrico</label>
-        <label><input type="radio" name="coche" value="gasolina"> Gasolina</label>
+
+        <label>
+          <input type="radio" name="coche" value="electrico">
+          Eléctrico
+        </label>
+
+        <label>
+          <input type="radio" name="coche" value="gasolina">
+          Gasolina
+        </label>
+
       </div>
+
     </div>
 
     <div class="question">
+
       <p>¿Tienes hijos menores de 15 años?</p>
+
       <div class="options">
-        <label><input type="radio" name="hijos" value="si"> Sí</label>
-        <label><input type="radio" name="hijos" value="no"> No</label>
+
+        <label>
+          <input type="radio" name="hijos" value="si">
+          Sí
+        </label>
+
+        <label>
+          <input type="radio" name="hijos" value="no">
+          No
+        </label>
+
       </div>
+
     </div>
 
     <div class="question">
@@ -190,12 +285,28 @@ textarea, input {
     </div>
 
     <div class="question">
+
       <p>¿Te preocupa el impacto que dejamos en los lugares que visitamos?</p>
+
       <div class="options">
-        <label><input type="radio" name="impacto" value="mucho"> Mucho</label>
-        <label><input type="radio" name="impacto" value="algo"> Algo</label>
-        <label><input type="radio" name="impacto" value="poco"> Poco</label>
+
+        <label>
+          <input type="radio" name="impacto" value="mucho">
+          Mucho
+        </label>
+
+        <label>
+          <input type="radio" name="impacto" value="algo">
+          Algo
+        </label>
+
+        <label>
+          <input type="radio" name="impacto" value="poco">
+          Poco
+        </label>
+
       </div>
+
     </div>
 
     <div class="question">
@@ -203,7 +314,8 @@ textarea, input {
       <textarea name="futuro" rows="2"></textarea>
     </div>
 
-    <!-- NUEVO BLOQUE CONTACTO -->
+    <!-- CONTACTO -->
+
     <div class="question">
       <p>Nombre y apellidos</p>
       <input type="text" name="nombre" required>
@@ -233,9 +345,11 @@ textarea, input {
 </div>
 
 <script>
+
 const form = document.getElementById('ritual-form');
 
 form.addEventListener('submit', async function(e) {
+
   e.preventDefault();
 
   const data = new FormData(form);
@@ -249,12 +363,19 @@ form.addEventListener('submit', async function(e) {
   });
 
   document.querySelector('.wrapper').innerHTML = `
+
     <div class="thankyou">
+
       Gracias.<br><br>
+
       Te diremos algo.
+
     </div>
+
   `;
+
 });
+
 </script>
 
 </body>

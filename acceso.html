@@ -7,36 +7,58 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body {
+
   margin: 0;
+
   font-family: 'Inter', sans-serif;
-  background: #fff;
+
+  background-color: #efe5d6;
+  background-image: url('paper-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   color: #111;
+
   -webkit-font-smoothing: antialiased;
 }
 
 /* NAV */
+
 .nav {
+
   position: absolute;
+
   top: 20px;
   left: 8%;
   right: 8%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   z-index: 5;
+
   color: white;
+
   font-size: 13px;
   letter-spacing: 1px;
 }
 
 .nav a {
+
   color: white;
+
   text-decoration: none;
+
   margin-left: 20px;
+
   opacity: 0.85;
 }
 
@@ -45,66 +67,105 @@ body {
 }
 
 /* HERO */
+
 .hero {
+
   position: relative;
+
   height: 70vh;
+
   display: flex;
   align-items: center;
+
   padding: 0 8%;
+
   color: white;
+
   background: url('club6.jpg') center/cover no-repeat;
 }
 
 .hero::before {
+
   content: "";
+
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.5)
+  );
 }
 
 .hero h1 {
+
   position: relative;
   z-index: 2;
+
   font-family: 'Playfair Display', serif;
+
   font-size: 2.3rem;
   font-weight: 400;
+
+  line-height: 1.2;
 }
 
 /* SECCIONES */
+
 .section {
+
   padding: 80px 8%;
+
   max-width: 700px;
 }
 
 /* TEXTO */
+
 .big {
+
   font-family: 'Playfair Display', serif;
+
   font-size: 2rem;
   line-height: 1.5;
 }
 
 /* IMAGEN HUMANA */
+
 .human img {
+
   width: 100%;
   max-width: 900px;
+
   display: block;
+
   margin: 0 auto;
 }
 
 /* BOTÓN */
+
 .button {
+
   display: inline-block;
+
   margin-top: 40px;
+
   padding: 12px 28px;
+
   background: #111;
+
   color: white;
+
   text-decoration: none;
+
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
   .hero {
     height: 55vh;
   }
@@ -116,67 +177,94 @@ body {
   .big {
     font-size: 1.6rem;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
+
 <nav class="nav">
-  <div><a href="index.html">ESTRELLAS</a></div>
+
+  <div>
+    <a href="index.html">ESTRELLAS</a>
+  </div>
+
   <div>
     <a href="ellugar.html">EL LUGAR</a>
     <a href="elclub.html">EL CLUB</a>
     <a href="acceso.html">ACCESO</a>
   </div>
+
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
-  <h1>Ya estás dentro.</h1>
+
+  <h1>
+    Ya estás dentro.
+  </h1>
+
 </section>
 
 <!-- MODELO -->
+
 <section class="section">
+
   <div class="big">
+
     ESTRELLAS no funciona como un alojamiento.<br>
     Funciona como un club.<br><br>
- 
+
     El número es limitado.<br>
     No crece con la demanda.<br><br>
- 
+
     Cada estancia tiene su tiempo,<br>
     su espacio,<br>
     y la posibilidad de compartirlo.<br>
     Pero no todo el mundo entra.<br><br>
-  
+
     Un tiempo en verano,<br>
     y otro en invierno.<br>
-    Para estar con los tuyos.<br>
-  <br>
+    Para estar con los tuyos.<br><br>
+
     Si necesitas saber todos los detalles,<br>
     probablemente no es el momento.
+
   </div>
+
 </section>
 
 <!-- HUMANIDAD -->
+
 <section class="human">
+
   <img src="paco_lucy.jpg">
+
 </section>
 
 <!-- CTA FINAL -->
+
 <section class="section">
+
   <div class="big">
+
     Estrellas lo estamos creando Paco & Lucy.<br>
+
     Si has llegado hasta aquí,<br>
-y te gustaría formar parte del club<br>
-  te animamos a continuar.<br>
+    y te gustaría formar parte del club<br>
+    te animamos a continuar.
+
   </div>
 
   <a href="ritual.html" class="button">
     CONTINUAR
   </a>
+
 </section>
 
 </body>

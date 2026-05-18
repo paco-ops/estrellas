@@ -7,6 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
@@ -19,45 +20,86 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 🔒 ACCESO */
+/* 🔒 ACCESS */
 
 .access {
   position: fixed;
   inset: 0;
-  background: black;
-  color: white;
+  background: #ede3d3;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-.access-box {
-  text-align: center;
+.access::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.45;
 }
 
-.access-box h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+.access-box {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+  z-index: 2;
+}
+
+.access-logo {
+  width: 420px;
+  max-width: 85vw;
+  margin-bottom: 90px;
+  opacity: 0.96;
+}
+
+.access-subtitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(70,60,50,0.6);
+  margin-bottom: 30px;
 }
 
 .access-box input {
-  margin-top: 20px;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid white;
+  width: 100%;
   background: transparent;
-  color: white;
+  border: none;
+  border-bottom: 1px solid rgba(70,60,50,0.25);
+  padding: 16px 0;
   text-align: center;
+  font-size: 14px;
+  color: #4d433a;
   outline: none;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+}
+
+.access-box input::placeholder {
+  color: rgba(70,60,50,0.4);
+  letter-spacing: 2px;
 }
 
 .access-box button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: white;
+  margin-top: 40px;
+  background: transparent;
   border: none;
+  color: #4d433a;
+  font-size: 11px;
+  letter-spacing: 5px;
   cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.access-box button:hover {
+  opacity: 1;
 }
 
 /* NAV */
@@ -132,14 +174,14 @@ h1 {
 /* SECCIONES */
 
 .section {
-  padding: 80px 8%;
+  padding: 120px 8%;
   max-width: 700px;
 }
 
 .big-text {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  line-height: 1.4;
+  font-size: 2.2rem;
+  line-height: 1.45;
 }
 
 /* BOTÓN */
@@ -185,7 +227,7 @@ h1 {
 /* FINAL */
 
 .final-text {
-  padding: 120px 8%;
+  padding: 140px 8%;
   background: white;
 }
 
@@ -193,15 +235,30 @@ h1 {
 
 @media (max-width: 768px) {
 
-  .hero { height: 80vh; }
+  .hero {
+    height: 80vh;
+  }
 
-  h1 { font-size: 2rem; }
+  h1 {
+    font-size: 2rem;
+  }
 
-  .big-text { font-size: 1.6rem; }
+  .big-text {
+    font-size: 1.6rem;
+  }
 
-  .life-image { height: 60vh; }
+  .life-image {
+    height: 60vh;
+  }
 
-  .final-text { padding: 80px 8%; }
+  .final-text {
+    padding: 80px 8%;
+  }
+
+  .access-logo {
+    width: 300px;
+    margin-bottom: 70px;
+  }
 
 }
 
@@ -210,15 +267,30 @@ h1 {
 
 <body>
 
-<!-- ACCESO -->
+<!-- ACCESS -->
 
 <div class="access" id="access">
+
   <div class="access-box">
-    <h1>ESTRELLAS</h1>
-    <input type="password" id="pass" placeholder="Acceso">
-    <br>
-    <button onclick="check()">Entrar</button>
+
+    <img src="logo-estrellas.png" class="access-logo">
+
+    <div class="access-subtitle">
+      Acceso privado
+    </div>
+
+    <input 
+      type="password" 
+      id="pass" 
+      placeholder="Código de acceso"
+    >
+
+    <button onclick="check()">
+      ENTRAR
+    </button>
+
   </div>
+
 </div>
 
 <div id="site" style="display:none">
@@ -238,6 +310,7 @@ h1 {
 <section class="hero">
   <img src="club11.jpg">
   <div class="overlay"></div>
+
   <div class="content">
     <h1>
       Hay lugares a los que vas.<br><br>
@@ -246,7 +319,7 @@ h1 {
   </div>
 </section>
 
-<!-- TEXTO 1 -->
+<!-- TEXTO -->
 
 <section class="section">
   <div class="big-text">
@@ -261,13 +334,13 @@ h1 {
   </div>
 </section>
 
-<!-- IMAGEN 1 -->
+<!-- IMAGEN -->
 
 <section class="life-image">
   <img src="club1.jpg">
 </section>
 
-<!-- TEXTO 2 -->
+<!-- TEXTO -->
 
 <section class="section">
   <div class="big-text">
@@ -278,13 +351,13 @@ h1 {
   </div>
 </section>
 
-<!-- IMAGEN 2 -->
+<!-- IMAGEN -->
 
 <section class="life-image">
   <img src="club5.jpg">
 </section>
 
-<!-- TEXTO ORIGINAL -->
+<!-- TEXTO -->
 
 <section class="section">
   <div class="big-text">
@@ -297,6 +370,7 @@ h1 {
     Donde el silencio vuelve a tener sentido.
   </div>
 </section>
+
 <!-- VIDEO -->
 
 <section>
@@ -314,7 +388,7 @@ h1 {
   </div>
 </section>
 
-  <!-- PAREJA -->
+<!-- PAREJA -->
 
 <section class="life-image">
   <img src="pacoylucy.jpg">
@@ -340,12 +414,18 @@ h1 {
 </div>
 
 <script>
+
 function check() {
+
   if (document.getElementById("pass").value === "estrellas") {
+
     document.getElementById("access").style.display = "none";
     document.getElementById("site").style.display = "block";
+
   }
+
 }
+
 </script>
 
 </body>
